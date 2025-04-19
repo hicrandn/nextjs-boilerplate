@@ -1,5 +1,7 @@
+import DropdownSidebar from "./DropdownSidebar";
 import BasicSidebar from "./BasicSidebar";
 
 export const SideBar = {
-    Basic: BasicSidebar
+    Basic: BasicSidebar,
+    Dropdown:DropdownSidebar
 }

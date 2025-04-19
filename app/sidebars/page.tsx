@@ -6,10 +6,10 @@ export default function SidebarsHome() {
       <h1 className="text-2xl text-black font-bold mb-4">Sidebar Example</h1>
       <ul className="space-y-2 text-blue-600 underline">
         <li>
-          <Link href="/sidebar/BasicSidebar">Basic Sidebar</Link>
+          <Link href="/sidebars/BasicSidebar">Basic Sidebar</Link>
         </li>
         <li>
-          <Link href="/examples/sidebars/sidebar2">Sidebar Two</Link>
+          <Link href="/sidebars/DropdownSidebar">Dropdown Sidebar</Link>
         </li>
         <li>
           <Link href="/examples/sidebars/sidebar2">Sidebar Three</Link>

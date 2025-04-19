@@ -12,7 +12,7 @@ export default function Home() {
 
       <ul className="space-y-2  text-blue-600 underline mt-4">
         <li>
-          <Link href="/sidebar">Sidebars</Link>
+          <Link href="/sidebars">Sidebars</Link>
         </li>
         <li>
         <Link href="/button">Buttons</Link>

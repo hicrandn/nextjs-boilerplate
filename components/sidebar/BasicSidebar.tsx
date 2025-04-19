@@ -3,19 +3,12 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import {
-  House,
-  UserRoundPen,
-  Settings,
   ChevronsRight,
   Menu,
 } from 'lucide-react';
 import Image from 'next/image'
+import { navItems } from '@/constants';
 
-const navItems = [
-  { name: 'Dashboard', path: '/dashboard', icon: House },
-  { name: 'Profile', path: '/profile', icon: UserRoundPen },
-  { name: 'Settings', path: '/settings', icon: Settings },
-];
 
 export default function BasicSidebar() {
   const pathname = usePathname();
