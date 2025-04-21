@@ -11,8 +11,15 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
-  //react/jsx-no-undef
+  //react/jsx-no-undefexport default tseslint.config({
+  
+
 
 ];
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// Removed redundant default export to avoid multiple default exports
+tseslint.config(
+  tseslint.configs.recommended,
+);
 
 export default eslintConfig;

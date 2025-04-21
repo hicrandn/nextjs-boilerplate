@@ -12,7 +12,7 @@ export default function SidebarsHome() {
           <Link href="/sidebars/DropdownSidebar">Dropdown Sidebar</Link>
         </li>
         <li>
-          <Link href="/examples/sidebars/sidebar2">Sidebar Three</Link>
+          <Link href="/sidebars/AnimatedSidebar">Animated Sidebar</Link>
         </li>
         <li>
           <Link href="/examples/sidebars/sidebar2">Sidebar Four</Link>

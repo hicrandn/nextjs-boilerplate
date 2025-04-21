@@ -44,7 +44,7 @@ export default function DropdownSidebar() {
             </div>
           )}
           {isCollapsed && (
-            <div className="w-18 h-8 bg-pink-200 rounded-full flex items-center justify-center p-3 ">
+            <div className="w-8 h-8 bg-pink-200 rounded-full flex items-center justify-center p-3 ">
               <span className="text-pink-500 font-semibold text-sm">WW</span>
             </div>
           )}
