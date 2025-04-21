@@ -1,14 +1,79 @@
 import {
-    House,
-    UserRoundPen,
-    Settings,
-    Bell
-  } from 'lucide-react';
+  Shield,
+  Bug,
+  Fish,
+  BarChart2,
+  Bookmark,
+  Settings,
+  HelpCircle,
+} from 'lucide-react';
 
-  export const navItems = [
-    { name: 'Dashboard', path: '/dashboard', icon: House },
-    { name: 'Profile', path: '/profile', icon: UserRoundPen },
-    { name: 'Notification', path: '/notification ', icon: Bell },
-    { name: 'Settings', path: '/settings', icon: Settings },
-    
-  ];
+export const navItems = [
+  {
+    name: 'Security',
+    path: '/security',
+    icon: Shield,
+    badge: '3',
+    subItems: [
+      { name: 'Overview', path: '/security/overview' },
+      { name: 'Alerts', path: '/security/alerts' },
+      { name: 'Settings', path: '/security/settings' },
+    ]
+  },
+  {
+    name: 'Bug Box',
+    path: '/bug-box',
+    icon: Bug,
+    subItems: [
+      { name: 'All Bugs', path: '/bug-box/all' },
+      { name: 'Reported', path: '/bug-box/reported' },
+      { name: 'Fixed', path: '/bug-box/fixed' },
+    ]
+  },
+  {
+    name: 'Fishing Tracking',
+    path: '/fishing',
+    icon: Fish,
+    subItems: [
+      { name: 'Dashboard', path: '/fishing/dashboard' },
+      { name: 'Analytics', path: '/fishing/analytics' },
+    ]
+  },
+  {
+    name: 'Deep Stats',
+    path: '/stats',
+    icon: BarChart2,
+    subItems: [
+      { name: 'Overview', path: '/stats/overview' },
+      { name: 'Details', path: '/stats/details' },
+    ]
+  },
+  {
+    name: 'Booked',
+    path: '/booked',
+    icon: Bookmark,
+    subItems: [
+      { name: 'All Bookmarks', path: '/booked/all' },
+      { name: 'Collections', path: '/booked/collections' },
+    ]
+  },
+  {
+    name: 'Settings',
+    path: '/settings',
+    icon: Settings,
+    subItems: [
+      { name: 'General', path: '/settings/general' },
+      { name: 'Security', path: '/settings/security' },
+      { name: 'Notifications', path: '/settings/notifications' },
+    ]
+  },
+  {
+    name: 'Support',
+    path: '/support',
+    icon: HelpCircle,
+    subItems: [
+      { name: 'Help Center', path: '/support/help' },
+      { name: 'Contact Us', path: '/support/contact' },
+    ]
+  },
+];
