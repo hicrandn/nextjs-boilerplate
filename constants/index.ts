@@ -18,6 +18,12 @@ export const navItems = [
       { name: 'Overview', path: '/security/overview' },
       { name: 'Alerts', path: '/security/alerts' },
       { name: 'Settings', path: '/security/settings' },
+      { name: 'Reports', path: '/security/reports' },
+      { name: 'Integrations', path: '/security/integrations' },
+      { name: 'API Keys', path: '/security/api-keys' },
+      { name: 'User Management', path: '/security/user-management' },
+      { name: 'Audit Logs', path: '/security/audit-logs' },
+      { name: 'Compliance', path: '/security/compliance' },
     ]
   },
   {

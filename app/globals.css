@@ -61,3 +61,21 @@ body {
     @apply flex items-center gap-2 p-2 rounded-md bg-gray text-white hover:bg-white hover:text-gray ;
   }
 }
+/* globals.css */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.4) transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #E8EAF6;
+  border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background-color: #E8EAF6
+}
