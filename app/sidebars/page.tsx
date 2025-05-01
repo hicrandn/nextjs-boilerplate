@@ -14,9 +14,6 @@ export default function SidebarsHome() {
         <li>
           <Link href="/sidebars/AnimatedSidebar">Animated Sidebar</Link>
         </li>
-        <li>
-          <Link href="/examples/sidebars/sidebar2">Sidebar Four</Link>
-        </li>
         
       </ul>
     </div>

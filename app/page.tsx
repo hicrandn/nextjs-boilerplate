@@ -17,6 +17,10 @@ export default function Home() {
         <li>
         <Link href="/buttons">Buttons</Link>
         </li>
+        <li>
+        <Link href="/loginpages">LoginPages</Link>
+        </li>
+
       </ul>
 
     </div>
