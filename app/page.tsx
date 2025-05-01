@@ -15,7 +15,7 @@ export default function Home() {
           <Link href="/sidebars">Sidebars</Link>
         </li>
         <li>
-        <Link href="/button">Buttons</Link>
+        <Link href="/buttons">Buttons</Link>
         </li>
       </ul>
 

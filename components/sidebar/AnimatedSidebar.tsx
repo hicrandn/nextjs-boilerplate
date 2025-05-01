@@ -6,7 +6,6 @@ import Link from "next/link";
 import { ChevronRight, ChevronsRight } from "lucide-react";
 import * as Avatar from "@radix-ui/react-avatar";
 import { motion, AnimatePresence } from "framer-motion";
-import { CustomScroll } from "react-custom-scroll";
 import React from "react";
 
 export default function AnimatedSidebar() {
@@ -136,8 +135,7 @@ export default function AnimatedSidebar() {
                     className=" 
                     absolute 
                     right-1 top-2 
-                    md:-right-52 md:top-2
-                    z-50
+                    md:-right-52 md:top-2 z-50
                     w-30 md:w-48
                     max-h-60 overflow-y-auto
                    bg-white shadow-xl rounded-xl
