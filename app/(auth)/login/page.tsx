@@ -66,9 +66,9 @@ const LoginPage = () => {
             >
               Login
             </button>
-            <Link href="/auth/forgot-password">
+            <Link href="/auth/register">
                 <span className="text-blue-700 text-sm hover:underline cursor-pointer">
-                    Forgot Password?
+                    Register
                 </span>
             </Link>
             </div>
