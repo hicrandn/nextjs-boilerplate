@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod"; 
 import { personalInfoSchema } from '@/lib/validation';
+import Link from 'next/link';
 
 interface FormInputs {
   userName: string;
@@ -16,6 +17,10 @@ interface FormInputs {
 const LoginPage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>({
         resolver: zodResolver(personalInfoSchema),
+        defaultValues: {
+            userName: "",
+            password: "",
+        },
     });
     const onSubmit: SubmitHandler<FormInputs> = (data) => {
         console.log(data);
@@ -54,12 +59,19 @@ const LoginPage = () => {
               </span>
             )}
 
+            <div className='flex flex-row items-center justify-between'>
             <button
               type="submit"
-              className="bg-blue-700 text-white font-semibold rounded-xl p-2"
+              className="bg-blue-700 text-white font-base rounded-xl p-2"
             >
               Login
             </button>
+            <Link href="/auth/forgot-password">
+                <span className="text-blue-700 text-sm hover:underline cursor-pointer">
+                    Forgot Password?
+                </span>
+            </Link>
+            </div>
           </form>
         </div>
 
