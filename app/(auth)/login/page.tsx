@@ -1,92 +1,21 @@
-"use client"
-import React from 'react'
-import Image from 'next/image'
-import { useForm, SubmitHandler } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod"; 
-import { personalInfoSchema } from '@/lib/validation';
-import Link from 'next/link';
-
-interface FormInputs {
-  userName: string;
-  password: string;
-}   
-
-
-
+import BasicLogin from "@/components/login/BasicLogin";
+import React from "react";
+import Link from "next/link";
 
 const LoginPage = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>({
-        resolver: zodResolver(personalInfoSchema),
-        defaultValues: {
-            userName: "",
-            password: "",
-        },
-    });
-    const onSubmit: SubmitHandler<FormInputs> = (data) => {
-        console.log(data);
-    };
-
   return (
-    <div className="h-screen flex items-center justify-center text-black px-4">
-      <div className="flex flex-col md:flex-row w-full max-w-5xl h-[600px] rounded-3xl shadow-xl overflow-hidden">
-        <div className="w-full md:w-1/2 h-full flex flex-col items-center justify-center px-8 bg-white/30 backdrop-blur-sm">
-          <h1 className="text-3xl text-blue-700 font-bold mb-6">Login</h1>
-          <form
-            className="flex flex-col space-y-4 w-full max-w-sm"
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <input
-              {...register("userName")}
-              type="text"
-              placeholder="Username"
-              className="border border-gray-300 rounded-xl p-2"
-            />
-            {errors.userName && (
-              <span className="text-red-500 text-sm">
-                {errors.userName.message}
-              </span>
-            )}
-
-            <input
-              {...register("password")}
-              type="password"
-              placeholder="Password"
-              className="border border-gray-300 rounded-xl p-2"
-            />
-            {errors.password && (
-              <span className="text-red-500 text-sm">
-                {errors.password.message}
-              </span>
-            )}
-
-            <div className='flex flex-row items-center justify-between'>
-            <button
-              type="submit"
-              className="bg-blue-700 text-white font-base rounded-xl p-2"
-            >
-              Login
-            </button>
-            <Link href="/auth/register">
-                <span className="text-blue-700 text-sm hover:underline cursor-pointer">
-                    Register
-                </span>
-            </Link>
-            </div>
-          </form>
-        </div>
-
-        <div className="w-full md:w-1/2 h-full relative hidden md:flex items-center justify-center bg-white/30 backdrop-blur-sm">
-          <Image
-            src="/images/login/benjiam.png"
-            alt="Login Illustration"
-            width={400}
-            height={400}
-            className="object-contain max-h-[80%] rounded-2xl shadow-lg"
-          />
-        </div>
-      </div>
+    <div className="p-6">
+      <h1 className="text-2xl text-black font-bold mb-4">Login Example</h1>
+      <ul className="space-y-2 text-blue-600 underline">
+        <li>
+          <Link href="/login/BasicLogin">Basic Login Page</Link>
+        </li>
+        <li>
+          <Link href="/login/DarkLogin">DarkLogin Page</Link>
+        </li>
+      </ul>
     </div>
   );
-}
+};
 
-export default LoginPage
+export default LoginPage;

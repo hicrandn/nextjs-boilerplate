@@ -1,19 +1,14 @@
-import React from 'react'
+import React from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const GlassyButton = () => {
   return (
-<div className="relative">
-  <div className="absolute inset-0 bg-gradient-to-br from-blue-300 to-purple-300 blur-sm rounded-full opacity-60"></div>
-  <button className="relative z-10 bg-white/30 backdrop-blur-md border border-white/40
-    shadow-lg rounded-full px-4 py-2 text-gray-700 font-medium
-    transition-all duration-300 hover:scale-105">
-    Glassy Button
-  </button>
-</div>
+    <button className="relative flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/30 shadow-lg text-white font-semibold transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300">
+      <span className="z-10">Glassy Button</span>
+      <AiOutlineArrowRight size={20} className="z-10" />
+      <span className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/30 to-purple-400/30 blur-sm opacity-60 -z-10" />
+    </button>
+  );
+};
 
-
- 
-  )
-}
-
-export default GlassyButton
+export default GlassyButton;
