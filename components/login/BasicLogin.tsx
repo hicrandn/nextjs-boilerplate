@@ -159,10 +159,9 @@ const BasicLogin = () => {
 
         <div className="w-full md:w-1/2 h-full relative hidden md:flex items-center justify-center bg-white/30 backdrop-blur-sm">
           <Image
-            src="/images/login/benjiam.png"
+            src="/images/login/logins.png"
             alt="Login Illustration"
-            width={400}
-            height={400}
+            fill
             className="object-cover rounded-2xl shadow-lg"
           />
         </div>
