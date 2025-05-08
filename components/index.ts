@@ -5,6 +5,7 @@ import BasicLogin from "./login/BasicLogin";
 import BasicButton from "./button/BasicButton";
 import GlassyButton from "./button/GlassyButton";
 import DarkLogin from "./login/DarkLogin";
+import BasicHeader from "./header/BasicHeader";
 
 export const SideBar = {
   Basic: BasicSidebar,
@@ -21,3 +22,7 @@ export const Button = {
   Basic: BasicButton,
   Glassy: GlassyButton,
 };
+
+export const header = {
+  Basic: BasicHeader,
+}
