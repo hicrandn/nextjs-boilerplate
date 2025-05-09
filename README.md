@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Modern Boilerplate
 
-## Getting Started
+A modern, feature-rich Next.js boilerplate with TypeScript, Tailwind CSS, and a beautiful UI component library.
 
-First, run the development server:
+## 🚀 Features
+
+- ⚡️ Next.js 15 with App Router
+- 🎨 Tailwind CSS for styling
+- 🔒 TypeScript for type safety
+- 🎭 Framer Motion for animations
+- 📱 Responsive design with mobile-first approach
+- 🎯 Modern UI components
+- 🔄 State management with React Hooks
+- 📝 Form handling with React Hook Form
+- ✅ Form validation with Zod
+- 🎨 Radix UI components
+- 🖼️ Lucide React icons
+- 🎯 ESLint configuration
+- 🚀 Turbopack for faster development
+
+## 📦 Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/nextjs-boilerplate.git
+cd nextjs-boilerplate
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Start the development server:
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗️ Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── app/                 # App router pages
+├── components/         # Reusable components
+│   ├── button/        # Button components
+│   ├── header/        # Header components
+│   ├── login/         # Login related components
+│   ├── sidebar/       # Sidebar components
+│   └── ui/            # UI components
+├── constants/         # Constants and configurations
+├── lib/              # Utility functions and libraries
+├── public/           # Static assets
+└── styles/           # Global styles
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Components
 
-## Deploy on Vercel
+### Sidebar Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `AnimatedSidebar`: Animated sidebar with collapsible functionality
+- `BasicSidebar`: Basic sidebar implementation
+- `DropdownSidebar`: Sidebar with dropdown menu support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Header Components
+
+- `BasicHeader`: Basic header implementation
+- `DropdownHeader`: Header with dropdown menu support
+
+### UI Components
+
+- Modern button components
+- Form components
+- Avatar components
+- Navigation components
+
+## 🛠️ Development
+
+```bash
+# Start development server
+yarn dev
+
+# Build for production
+yarn build
+
+# Start production server
+yarn start
+
+# Run linting
+yarn lint
+```
+
+## 📱 Responsive Design
+
+The boilerplate is built with a mobile-first approach and includes:
+
+- Responsive layouts
+- Mobile-friendly navigation
+- Adaptive components
+- Touch-friendly interactions
+
+## 🎯 Features in Detail
+
+### Sidebar Features
+
+- Collapsible sidebar
+- Mobile-responsive design
+- Smooth animations
+- Dropdown menu support
+- User profile section
+
+### Header Features
+
+- Responsive design
+- Navigation support
+- User profile integration
+- Mobile menu support
+
+### UI Features
+
+- Modern design system
+- Consistent styling
+- Interactive components
+- Accessibility support
+
+## 🔧 Configuration
+
+The project uses various configuration files:
+
+- `next.config.ts`: Next.js configuration
+- `tsconfig.json`: TypeScript configuration
+- `tailwind.config.js`: Tailwind CSS configuration
+- `eslint.config.mjs`: ESLint configuration
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
