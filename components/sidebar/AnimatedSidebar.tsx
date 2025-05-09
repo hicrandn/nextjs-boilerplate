@@ -142,8 +142,7 @@ export default function AnimatedSidebar() {
                    p-1 space-y-1
                    scrollbar-custom
                    border border-indigo-200
-                   " 
-  
+                   "
                   >
                     {item.subItems.map((subItem) => (
                       <Link
