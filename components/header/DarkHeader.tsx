@@ -17,9 +17,9 @@ const DarkHeader = () => {
           <div className="w-8 h-8 rounded-md flex items-center justify-center bg-gradient-to-br from-zinc-800 to-black shadow-lg">
             <BsStars size={28} className="text-white" />
           </div>
-          <span className="text-2xl font-semibold text-white tracking-tight">
+          <Link href="/" className="text-2xl font-bold">
             Brayns AI
-          </span>
+          </Link>
         </div>
 
         <nav className="hidden md:flex items-center justify-center flex-1 mx-12">

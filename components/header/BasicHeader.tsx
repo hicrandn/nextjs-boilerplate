@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { navItems } from "@/constants";
 import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
+import { BsStars } from "react-icons/bs";
 
 const BasicHeader = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -17,8 +18,11 @@ const BasicHeader = () => {
   return (
     <div className="bg-white shadow-md p-4 text-black flex justify-between items-center relative">
       <div className="flex items-center space-x-4">
+        <div className="w-8 h-8 rounded-md flex items-center justify-center bg-gradient-to-br from-indigo-800 to-white ">
+          <BsStars size={28} className="text-white" />
+        </div>
         <Link href="/" className="text-2xl font-bold">
-          My Logo
+          Brayns AI
         </Link>
       </div>
 
@@ -84,45 +88,42 @@ const BasicHeader = () => {
           <div className="relative w-full max-w-xs mx-auto rounded-2xl bg-white/90 backdrop-blur-md border border-gray-200 shadow-2xl p-6 flex flex-col items-stretch gap-2 z-50 overflow-y-auto">
             {navItems.map((item) => (
               <div key={item.name} className="w-full">
-                <button
-                  className="w-full flex items-center justify-between text-base font-semibold py-2 rounded-lg text-indigo-500 hover:bg-indigo-50 transition-colors"
-                  onClick={() =>
-                    item.subItems
-                      ? setOpenMobileDropdown(
+                {item.subItems ? (
+                  <>
+                    <button
+                      className="w-full flex items-center justify-between text-base font-semibold py-2 rounded-lg text-gray-800 hover:text-indigo-500 hover:bg-indigo-50 transition-colors"
+                      onClick={() =>
+                        setOpenMobileDropdown(
                           openMobileDropdown === item.name ? null : item.name
                         )
-                      : setIsMobileMenuOpen(false)
-                  }
-                >
-                  <span className="text-left flex-1">{item.name}</span>
-                  {item.subItems && (
-                    <ChevronRight
-                      className={`ml-2 transition-transform ${
-                        openMobileDropdown === item.name ? "rotate-90" : ""
-                      }`}
-                    />
-                  )}
-                </button>
-                {/* Submenu for mobile */}
-                {item.subItems && openMobileDropdown === item.name && (
-                  <div className="pl-4 mt-1 flex flex-col gap-0.5 border-l border-indigo-100 ml-2">
-                    {item.subItems.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.path}
-                        className="block text-sm text-gray-500 py-1 px-2 rounded hover:bg-indigo-50 hover:text-indigo-600 transition-colors text-left"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-                {/* Direct link for items without subItems */}
-                {!item.subItems && (
+                      }
+                    >
+                      <span className="text-left flex-1">{item.name}</span>
+                      <ChevronRight
+                        className={`ml-2 transition-transform ${
+                          openMobileDropdown === item.name ? "rotate-90" : ""
+                        }`}
+                      />
+                    </button>
+                    {openMobileDropdown === item.name && (
+                      <div className="pl-4 mt-1 flex flex-col gap-0.5 border-l border-indigo-100 ml-2">
+                        {item.subItems.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.path}
+                            className="block text-sm text-gray-500 py-1 px-2 rounded hover:bg-indigo-50 hover:text-indigo-600 transition-colors text-left"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
                   <Link
                     href={item.path}
-                    className="block w-full text-base text-indigo-500 py-2 rounded hover:bg-indigo-50 hover:text-indigo-600 text-left transition-colors"
+                    className="block w-full text-base text-gray-800 py-2 rounded hover:bg-indigo-50 hover:text-indigo-500 text-left transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
