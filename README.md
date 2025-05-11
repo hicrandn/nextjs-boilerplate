@@ -39,21 +39,8 @@ yarn install
 yarn dev
 ```
 
-## 🏗️ Project Structure
 
-```
-├── app/                 # App router pages
-├── components/         # Reusable components
-│   ├── button/        # Button components
-│   ├── header/        # Header components
-│   ├── login/         # Login related components
-│   ├── sidebar/       # Sidebar components
-│   └── ui/            # UI components
-├── constants/         # Constants and configurations
-├── lib/              # Utility functions and libraries
-├── public/           # Static assets
-└── styles/           # Global styles
-```
+
 
 ## 🎨 Components
 
@@ -124,18 +111,9 @@ The boilerplate is built with a mobile-first approach and includes:
 - Interactive components
 - Accessibility support
 
-## 🔧 Configuration
 
-The project uses various configuration files:
 
-- `next.config.ts`: Next.js configuration
-- `tsconfig.json`: TypeScript configuration
-- `tailwind.config.js`: Tailwind CSS configuration
-- `eslint.config.mjs`: ESLint configuration
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👥 Contributing
 
