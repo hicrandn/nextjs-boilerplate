@@ -26,8 +26,9 @@ const BasicLogin = () => {
     },
   });
   const [showPassword, setShowPassword] = React.useState(false);
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormInputs> = () => {
+    // TODO: send credentials to your auth endpoint over HTTPS.
+    // Never log the form data here — it contains the plaintext password.
   };
   return (
     <div className="h-screen flex items-center justify-center text-black px-4 sm:px-6">
